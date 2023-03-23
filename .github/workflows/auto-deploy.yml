@@ -24,9 +24,18 @@ jobs:
       - name: Install & Build
         run: npm install && npm run build
 
-      - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@releases/v3
+      # - name: Deploy
+      #   uses: JamesIves/github-pages-deploy-action@releases/v3
+      #   with:
+      #     ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+      #     BRANCH: production
+      #     FOLDER: src/.vuepress/dist
+
+      - name: Deploy to GitHub Pages
+        uses: crazy-max/ghaction-github-pages@v2.2.0
         with:
-          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-          BRANCH: production
-          FOLDER: src/.vuepress/dist
+          repo: cdmcs/cdmcs.github.io
+          target_branch: main
+          build_dir: src/.vuepress/dist
+        env:
+          GH_PAT: ${{ secrets.ACCESS_TOKEN }}
