@@ -6,7 +6,7 @@
   "license": "MIT",
   "author": "cdmcs",
   "scripts": {
-    "build": "vuepress build src",
+    "build": "vuepress build src --max_old_space_size=10240",
     "clean": "vuepress dev src --clean-cache",
     "dev": "vuepress dev src",
     "update-package": "npx vp-update"
