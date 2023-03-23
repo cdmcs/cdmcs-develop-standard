@@ -1,15 +1,18 @@
 {
   "name": "cdmcs-develop-standard",
   "version": "2.0.0",
+  "homepage": "https://cdmcs.github.io/develop-standard",
   "private": true,
   "description": "cdmcs-develop-standard",
   "license": "MIT",
-  "author": "Yang Xin",
+  "author": "cdmcs",
   "scripts": {
     "build": "vuepress build src",
     "clean": "vuepress dev src --clean-cache",
     "dev": "vuepress dev src",
-    "update-package": "npx vp-update"
+    "update-package": "npx vp-update",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "devDependencies": {
     "@vuepress/client": "2.0.0-beta.60",
