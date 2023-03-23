@@ -1,1 +1,0 @@
-import{_ as o,V as t,W as r,X as e,$ as c,Y as s,C as a}from"./framework-2d083801.js";const l={},_={href:"https://wiki.centos.org/Download",target:"_blank",rel:"noopener noreferrer"};function i(d,f){const n=a("ExternalLinkIcon");return t(),r("div",null,[e("p",null,[e("a",_,[c("Centos下载"),s(n)])])])}const m=o(l,[["render",i],["__file","centos.html.vue"]]);export{m as default};

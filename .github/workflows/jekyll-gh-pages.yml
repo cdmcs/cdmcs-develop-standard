@@ -26,10 +26,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-      - name: Setup Pages
-        uses: actions/configure-pages@v3
+      - name: Install
+        uses: npm run install
+      - name: Build
+        uses: npm run build
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
         with:
