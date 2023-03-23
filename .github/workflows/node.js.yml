@@ -5,35 +5,42 @@ on:
     branches:
       - main
 
-# 任务
+
 jobs:
   build-and-deploy:
 
     runs-on: ubuntu-latest
     
-    strategy:
-      matrix:
-        node-version: [16.x]
+    env:
+      NODE_VERSION: '16.16.0'
         
     steps:
-      # 拉取代码
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
-          persist-credentials: false
+          fetch-depth: 0
           
-      # 设置node版本
-      - name: Use Node.js ${{ matrix.node-version }}
+      - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: ${{ matrix.node-version }}
+          node-version: ${{ env.NODE_VERSION }}
           cache: "npm"
 
-      # 生成静态文件
-      - name: Build
-        run: npm install && npm run build
+      - name: Install dependencies
+        run: npm install
 
-      # 部署到 GitHub Pages
+      - name: Build documentation site
+        run: npm run build
+        
+#       - name: Deploy to GitHub Pages
+#         uses: crazy-max/ghaction-github-pages@v2.2.0
+#         with:
+#           repo: vuepress/vuepress.github.io
+#           target_branch: main
+#           build_dir: src/.vuepress/dist
+#         env:
+#           GH_PAT: ${{ secrets.ACCESS_TOKEN }}
+
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@releases/v3
         with:
