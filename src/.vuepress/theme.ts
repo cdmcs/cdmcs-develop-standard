@@ -12,7 +12,7 @@ export default hopeTheme({
   },
   iconAssets: "iconfont",
   logo: "/logo.svg",
-  repo: "coder-new-web/cdmcs-develop-standard",
+  repo: "cdmcs/cdmcs-develop-standard",
   docsDir: "src",
 
   fullscreen: true,
@@ -40,10 +40,10 @@ export default hopeTheme({
     //评论功能
     comment: {
       provider: "Giscus",
-      repo: "coder-new-web/cdmcs-develop-standard",
-      repoId: "R_kgDOJHw80Q",
-      category: "Announcements",
-      categoryId: "DIC_kwDOJHw80c4CUxoD",
+      repo: "cdmcs/cdmcs-develop-standard",
+      repoId: "R_kgDOJNH4pA",
+      category: "General",
+      categoryId: "DIC_kwDOJNH4pM4CVEub",
     },
 
     copyCode: {
