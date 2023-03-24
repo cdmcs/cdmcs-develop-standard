@@ -5,10 +5,10 @@ import navbar from "./navbar/index.js";
 import sidebar from "./sidebar/index.js";
 
 export default hopeTheme({
-  hostname: "https://blog.coder-new.cn/",
+  hostname: "http://www.cdmcs.com/",
   author: {
     name: "杨新",
-    url: "https://blog.coder-new.cn/",
+    url: "http://www.cdmcs.com/",
   },
   iconAssets: "iconfont",
   logo: "/logo.svg",
@@ -40,10 +40,10 @@ export default hopeTheme({
     //评论功能
     comment: {
       provider: "Giscus",
-      repo: "cdmcs/cdmcs-develop-standard",
-      repoId: "R_kgDOJNH4pA",
-      category: "General",
-      categoryId: "DIC_kwDOJNH4pM4CVEub",
+      repo: "cdmcs/cdmcs.github.io",
+      repoId: "R_kgDOJNPjvw",
+      category: "Devlop",
+      categoryId: "DIC_kwDOJNPjv84CVGvk",
     },
 
     copyCode: {
