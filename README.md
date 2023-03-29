@@ -53,4 +53,4 @@ npm run update-package
 
 ### Reference documents
 
-[vuepress-theme-hope](https://theme-hope.vuejs.press/zh/guide/)
+[vuepress](https://vuepress.github.io/zh/)

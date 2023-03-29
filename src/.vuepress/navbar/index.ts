@@ -5,6 +5,8 @@ const zhNavbar = navbar([
   "/",
   //前端
   { text: "前端", icon: "template", link: "/web/" },
+  //公共组件说明
+  { text: "公共组件", icon: "flex", link: "/public-component-intro/" },
   //后端
   { text: "后端", icon: "back-stage", link: "/java/" },
   //前端工具
