@@ -1,7 +1,8 @@
 {
   "name": "cdmcs-develop-standard",
   "version": "2.0.0",
-  "private": true,
+  "private": false,
+  "homepage": "https://cdmcs.github.io",
   "description": "cdmcs-develop-standard",
   "license": "MIT",
   "author": "cdmcs",
@@ -12,10 +13,10 @@
     "update-package": "npx vp-update"
   },
   "devDependencies": {
-    "@vuepress/client": "2.0.0-beta.60",
+    "@vuepress/client": "^2.0.0-beta.61",
     "vue": "^3.2.47",
-    "vuepress": "2.0.0-beta.60",
-    "vuepress-plugin-search-pro": "^2.0.0-beta.166",
-    "vuepress-theme-hope": "2.0.0-beta.182"
+    "vuepress": "^2.0.0-beta.61",
+    "vuepress-plugin-search-pro": "^2.0.0-beta.199",
+    "vuepress-theme-hope": "^2.0.0-beta.199"
   }
 }
