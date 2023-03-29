@@ -175,3 +175,16 @@ top.$.MdiAlert("弹框标题", '弹框内容', "EXC", function() {
 ```
 
 :::
+
+
+## 设定弹框大小
+
+通常由被打开页面设死大小，见代码:
+
+::: details 查看代码
+```javascript
+function _init(args, mdi, layerIdx, parentWindow) {
+  mdi.setSize(800, 420);
+}
+```
+:::
