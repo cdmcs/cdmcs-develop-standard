@@ -28,13 +28,14 @@ function open_JSDW() {
 
 返回参数res说明：
 
-| 参数名      | 数据格式      | 说明                                          |
-| :---------- | :------------ | :-------------------------------------------- |
-| DWMC        | json 或string | 选择的单位信息，详细参数见下                  |
-| LXRDH       | string        | 联系人电话                                    |
-| LXRSFZHM    | string        | 联系人身份证号                                |
-| LXRXM       | string        | 联系人姓名                                    |
-| inputByhand | boolean       | 是否是手动输入，值为true或false ，默认为false |
+| 参数名      | 数据格式      | 说明                                                 |
+| :---------- | :------------ | :--------------------------------------------------- |
+| DWMC        | json 或string | 选择的单位信息，详细参数见下                         |
+| SHXYDM      | string        | 社会信用代码，取值以这个为准，当然下面DWMC也返回的有 |
+| LXRDH       | string        | 联系人电话                                           |
+| LXRSFZHM    | string        | 联系人身份证号                                       |
+| LXRXM       | string        | 联系人姓名                                           |
+| inputByhand | boolean       | 是否是手动输入，值为true或false ，默认为false        |
 
 DWMC参数说明：
 
