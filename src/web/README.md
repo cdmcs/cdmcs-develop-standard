@@ -1,5 +1,5 @@
 ---
-title: 前端开发规范指南
+title: 前端开发规范
 icon: guide
 date: 2023-03-01
 category:

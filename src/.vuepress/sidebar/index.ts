@@ -74,6 +74,13 @@ import { sidebar } from "vuepress-theme-hope";
       collapsible: true,
       children:"structure"
     },
+  ],
+  "/public-component-intro/":[
+    "",
+    {
+      text:"配套费核缴管理系统",
+      link:"/public-component-intro/peitaofei.html"
+    },
   ]
 });
 
