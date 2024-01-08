@@ -35,11 +35,11 @@ export default hopeTheme({
       copyright: false,
     },
   },
-  encrypt: {
-    config: {
-      "/public-component-intro/": ["Cdmcs028"],
-    },
-  },
+  // encrypt: {
+  //   config: {
+  //     "/public-component-intro/": ["Cdmcs028"],
+  //   },
+  // },
 
   plugins: {
     //评论功能
