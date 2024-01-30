@@ -8,14 +8,18 @@ category:
 <!-- more -->
 
 
-项目目录
+:::tip
+<a href="/demo/cdmap-demo.zip" download='cdmap使用示例下载.zip' >使用示例下载</a>
+:::
+
+## 项目目录
 ```text
 - cdmap
     - index.min.css
     - index.min.js
 ```
 
-参数说明：
+## 参数说明
 | 参数名        | 类型     | 说明                                             | 示例(可选值)                                                                                                         |
 | :------------ | :------- | :----------------------------------------------- | :------------------------------------------------------------------------------------------------------------------- |
 | draw          | Boolean  | 是否可以画图                                     | 可选值为true、false                                                                                                  |
@@ -24,6 +28,7 @@ category:
 | mapType       | String   | 渲染的地图类型                                   | 可选值为：imageservice——影像电子地图和default——电子地图标准版                                                        |
 
 
+## draw-graph
 `draw-graph`接收的json格式如下：
 ```js
 // 传矩形
@@ -188,7 +193,7 @@ category:
 
 `rings`就是图案边框上坐落的坐标，组件会根据`rings`坐标组和`type`图案类型来绘制图案。需要注意的是，`rings`坐标都要为wgs84坐标类型，反正在地图上绘制会出现偏差
 
-
+## draw-complete
 `draw-complete`函数返回值如下：
 ```js
 {
@@ -208,5 +213,49 @@ category:
 以上`type`的值可以参考上面`type`的取值，`coordsType`返回的是坐标类型，`center`为图案的中心点，当绘制圆、多边形、矩形时返回中心点有助于依据中心点坐标进行导航，`rings`为图案边框上坐落的坐标，坐标类型都为wgs84
 
 
-<a href="./demo/cdmap-demo.zip" download='cdmap使用示例下载.zip' >使用示例下载</a>
+## 使用
+
+**文件引入顺序建议**
+```html
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.9/vue.js"></script>
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+<script src="https://js.arcgis.com/4.28/"></script>
+<link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css" />
+<link rel="stylesheet" href="./cdmap/index.min.css" />
+<script src="./cdmap/index.min.js"></script>
+<!-- 
+  1、引入vue的js代码
+  2、引入element-ui的js代码
+  3、引入arcgis库
+  4、引入element-ui的css代码
+  5、引入cdmap的js代码
+  6、引入cdmap的css代码
+  7、引入此页面的css代码
+ -->
+```
+
+**使用**
+```html
+<body>
+  <div id="app">
+    <cd-map @draw-complete="drawComplete"  :draw="canDraw" :init-map-type="mapType" />
+  </div>
+</body>
+<script>
+  CDMapLoaded(function () {
+    new Vue({
+      el: "#app",
+      data: {
+        canDraw: true, 
+        mapType: "imageservice", 
+      },
+      methods: {
+        drawComplete: function (result) {
+          console.log(result);
+        },
+      },
+    });
+  });
+</script>
+```
 
