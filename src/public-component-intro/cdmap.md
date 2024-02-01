@@ -9,7 +9,7 @@ category:
 
 
 :::tip
-<a href="/demo/cdmap-demo.zip" download='cdmap使用示例下载.zip' >使用示例下载</a>
+<a href="/demo/cdmap-demo.zip" download>使用示例下载</a>
 :::
 
 ## 项目目录
