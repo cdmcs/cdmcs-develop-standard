@@ -178,8 +178,8 @@ category:
 ```html
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.9/vue.js"></script>
 <script src="https://unpkg.com/element-ui/lib/index.js"></script>
-<script src="https://js.arcgis.com/4.28/"></script>
 <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css" />
+<script src="./cdmap/init.js"></script>
 <link rel="stylesheet" href="./cdmap/index.min.css" />
 <script src="./cdmap/index.min.js"></script>
 <!-- 
