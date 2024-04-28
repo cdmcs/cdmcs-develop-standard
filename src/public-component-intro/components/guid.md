@@ -7,9 +7,14 @@ order: 1
 ---
 
 
+:::info 前言
+已了解“使用须知”？[开始使用](./intro.md)
+
+还未下载组件库？[开始下载](./versions.md)
+:::
 
 
-#### 写在前面
+## 写在前面
 
 &emsp;&emsp;此组件库结合了[element-ui](https://element.eleme.cn/#/zh-CN/component/installation)封装了一些公司日常开发过程中常用的组件、方法，诣在提高团队整体的开发效率。
 
@@ -17,14 +22,20 @@ order: 1
 
 
 
-#### 组件库文件存放位置
+## 组件库文件存放位置
 
-组件库存放位置应在公共路径，让每一位开发者在页面头部引入即可，后面公共库代码修改也只需要替换公共路径下的文件，引入方式也无需修改(建议不带版本号)，减少代码维护工作。
+:::tip
+&emsp;&emsp;下载完成后可以打开`index.html`查看部分效果。
+
+&emsp;&emsp;若想在项目中使用，除了`index.html`文件，其它文件都需要复制。
+:::
+
+&emsp;&emsp;组件库存放位置应在公共路径，让每一位开发者在页面头部引入即可，后面公共库代码修改也只需要替换公共路径下的文件，引入方式也无需修改(建议不带版本号)，方便减少代码维护工作。
 
 
-#### 引入方式
+## 引入方式
 
-以下是引用公共库文件方法示例代码==（复制粘贴后请手动删除注释内容）==：
+以下是引用公共库文件方法示例代码（==复制、粘贴后请手动删除注释内容==）：
 ```html
 <!-- 在页面头部 -->
 <head>
@@ -37,15 +48,15 @@ order: 1
 </head>
 ```
 
-#### 使用注意
+## 使用注意
 
-一切在[element-ui](https://element.eleme.cn/#/zh-CN/component/installation)文档上有介绍的按官方文档正常使用即可，一切组件无需手动在页面注册可以直接使用。
+&emsp;&emsp;一切在[element-ui](https://element.eleme.cn/#/zh-CN/component/installation)文档上有介绍的按官方文档正常使用即可，一切组件无需手动在页面注册可以直接使用。
 
-若用到公共组件，则页面使用方法为：`<cdmcs-xxx />`。
+&emsp;&emsp;若用到公共组件，则页面使用方法为：`<cdmcs-xxx />`。
 
-若用到公共方法，则页面使用方法为：`CDMCS.xxx`或`window.CDMCS.xxx`。
+&emsp;&emsp;若用到公共方法，则页面使用方法为：`CDMCS.xxx`或`window.CDMCS.xxx`。
 
-注意：**CDMCS.xxx或window.CDMCS.xxx使用方法只能在JS中直接使用，无法在html中直接使用，若想在html中直接使用CDMCS.xxx方法，查看下面示例代码：**
+&emsp;&emsp;注意：**CDMCS.xxx或window.CDMCS.xxx使用方法只能在JS中直接使用，无法在html中直接使用，若想在html中直接使用CDMCS.xxx方法，查看下面示例代码：**
 
 ```html
 <!DOCTYPE html>

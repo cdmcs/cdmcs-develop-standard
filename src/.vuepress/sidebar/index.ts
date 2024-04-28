@@ -78,12 +78,18 @@ const zhSidebar = sidebar({
   "/public-component-intro/": [
     "",
     {
-      text: "配套费核缴管理系统",
-      link: "/public-component-intro/peitaofei.html",
+      text: "常用公共组件与方法",
+      prefix: "components/",
+      collapsible: true,
+      children: "structure",
     },
     {
       text: "成都地图",
       link: "/public-component-intro/cdmap.html",
+    },
+    {
+      text: "配套费核缴管理系统",
+      link: "/public-component-intro/peitaofei.html",
     },
   ],
 });
