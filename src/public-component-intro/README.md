@@ -1,5 +1,5 @@
 ---
-title: 公共组件说明
+title: 公共组件
 icon: guide
 date: 2023-03-29
 index: false

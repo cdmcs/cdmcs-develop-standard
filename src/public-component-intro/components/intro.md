@@ -6,20 +6,26 @@ category:
 order: 2
 ---
 
-### 公共组件
 
-#### cdmcs-phone
+:::info 前言
+- 还未了解“使用须知”？[开始了解](./guid.md)
+- 还未下载组件库？[开始下载](./versions.md)
+:::
+
+## 公共组件
+
+### cdmcs-phone 组件
 
 控制手机号是否脱敏显示
 
-##### 使用
+#### 使用
 
 ```html
 <!-- 在页面中使用 -->
 <cdmcs-phone />
 ```
 
-##### 参数
+#### 参数
 
 | 参数      | 说明               | 类型    | 默认值 | 可选值 |
 | :-------- | :----------------- | :------ | :----- | ------ |
@@ -34,14 +40,14 @@ order: 2
 | change | 当控制手机号是否脱敏显示时触发 | (value:boolean)=>void |
 
 
-### 公共方法
+## 公共方法
 
-#### useValidate
+### useValidate
 
 使用`useValidate`可验证用户输入的、信息是否正确。
 
 
-##### 使用
+#### 使用
 
 ```vue
 <template>
@@ -101,49 +107,14 @@ order: 2
 
 当需要校验不通过时想手动处理逻辑可调用此方法。
 
-#### useValidateIdNum
 
-通过调用`useValidateIdNum`使用预设的校验错误失败提示。
+### useValidateIdNum
 
-##### 使用
+通过调用`useValidateIdNum`使用预设的校验18位身份证号码错误失败提示。
 
-```vue
-<template>
-  <el-form-item
-    prop="idNum"
-    label="身份证号"
-    :rules="[
-      { required: true, message: '身份证号不可为空', trigger: 'blur' },
-      {  trigger: ['blur', 'change'],validator: CDMCS.useValidateIdNum}
-    ]">
-    <el-input v-model="form.phone" placeholder="请输入身份证号(使用预设校验提示错误信息)"></el-input>
-  </el-form-item>
-</template>
+==已经实现了校验身份证号码18位的长度和身份证的格式==
 
-
-<script>
-  new Vue({
-    el: "#app",
-    data: function () {
-      return {
-        form: {
-          idNum: "",
-        },
-        // 将window上的CDMCS方法挂载到vue，然后在上面的validator中直接使用CDMCS.useValidateIdNum
-        CDMCS: window.CDMCS || null,
-      };
-    },
-  });
-</script>
-
-
-```
-
-#### useValidateIdNum
-
-通过调用`useValidateIdNum`使用预设的校验错误失败提示。
-
-##### 使用
+#### 使用
 
 ```vue
 <template>
@@ -176,3 +147,10 @@ order: 2
 
 
 ```
+
+
+### useValidateTelephone
+
+通过调用`useValidateTelephone`使用预设的校验11位手机号码错误失败提示。
+
+使用方法：参考`useValidateIdNum`的使用
